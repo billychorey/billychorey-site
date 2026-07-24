@@ -110,35 +110,38 @@
   footer .fx{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   footer a{color:var(--accent)}
   .photo-note{font-family:var(--sans);font-size:12px;color:var(--muted);margin-top:8px}
+  .writing-list{list-style:none;padding:0;margin:26px 0 0;max-width:660px}
+  .writing-list li{border-top:1px solid var(--line)}
+  .writing-list a{font-family:var(--serif);font-size:clamp(18px,2.4vw,25px);color:var(--ink);display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:18px 0;transition:color var(--motion)}
+  .writing-list a:hover{color:var(--accent)}
+  .writing-list .arw{font-family:var(--sans);color:var(--accent);font-size:16px}
   [hidden]{display:none!important}
 </style>
 </head>
 <body>
-<a class="skip" href="#work">Skip to content</a>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="nav">
   <div class="wrap nav-in">
     <span class="brand"><span class="logo">bc</span> Billy Chorey</span>
     <nav aria-label="Primary"><ul>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#writing">Writing</a></li>
-      <li><a href="#about">About</a></li>
       <li><a href="#lens">Accessibility</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="mailto:billychorey@gmail.com">Contact</a></li>
     </ul></nav>
-    <a class="resume" href="#">Résumé ↓</a>
+    <a class="resume" href="resume.pdf" download>Résumé ↓</a>
   </div>
 </header>
 
-<main>
+<main id="main">
 <section class="hero" aria-labelledby="h1">
   <div class="wrap">
     <p class="kicker">Front-End Developer · Web Accessibility</p>
     <h1 id="h1">I make the web work<br>for <em>everyone</em>.</h1>
     <p class="lede">Accessible interfaces, thoughtful code, and experiences that are genuinely beautiful for every person who lands on them.</p>
     <div class="cta">
-      <a class="btn btn-primary" href="#work">View my work →</a>
-      <a class="btn btn-ghost" href="#lens">See the Accessibility Lens</a>
+      <a class="btn btn-primary" href="#lens">See the Accessibility Lens →</a>
+      <a class="btn btn-ghost" href="mailto:billychorey@gmail.com">Get in touch</a>
     </div>
 
     <div class="controls" role="group" aria-label="Accessibility display controls">
@@ -212,15 +215,27 @@
         <li>Perceivable</li><li>Operable</li><li>Understandable</li><li>Robust</li>
       </ul>
     </div>
-    <p class="photo-note">Design note: face-less on purpose — the typography carries it, and it sidesteps a stock-photo stranger. Drop in a real photo of you anytime if you want a two-column hero.</p>
   </div>
 </section>
 </main>
 
+<section id="writing" aria-labelledby="wH">
+  <div class="wrap">
+    <p class="eyebrow">Writing</p>
+    <h2 id="wH">I think out loud about <em>accessibility</em>.</h2>
+    <p class="sec-lede">Occasional posts on building interfaces that actually work for everyone.</p>
+    <ul class="writing-list">
+      <li><a href="https://medium.com/@billychorey">JavaScript and Accessibility <span class="arw">Read →</span></a></li>
+      <li><a href="https://medium.com/@billychorey">Controlled Forms in React: A Comprehensive Guide <span class="arw">Read →</span></a></li>
+      <li><a href="https://medium.com/@billychorey">Smiling Through the Sprint: Soft Skills That Saved My Standups <span class="arw">Read →</span></a></li>
+    </ul>
+  </div>
+</section>
+
 <footer id="contact">
   <div class="wrap fx">
     <span>© Billy Chorey · Charlottesville, VA</span>
-    <span>billychorey@gmail.com · <a href="#">LinkedIn</a> · <a href="#">GitHub</a> · <a href="#writing">Writing</a></span>
+    <span><a href="mailto:billychorey@gmail.com">billychorey@gmail.com</a> · <a href="https://www.linkedin.com/in/billy-chorey-191a95b/">LinkedIn</a> · <a href="https://github.com/billychorey">GitHub</a> · <a href="https://medium.com/@billychorey">Medium</a></span>
   </div>
 </footer>
 
